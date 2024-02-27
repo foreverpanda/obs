@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@1,400..700&family=Noto+Sans:ital,wght@0,100;1,100&family=Poppins:wght@100;400&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital@1&display=swap');
+
 * {
 
     margin: 0;
@@ -9,56 +11,72 @@
     box-sizing: border-box;
     color: #fff;
 }
+
 html,
 body {
     height: 100vh;
     width: 100%;
     background-color: #0B0B0B;
+    overflow-x: hidden;
 
 }
-#loader{
+
+#crsr {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.831);
+    position: fixed;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#loader {
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 999999999999999999999999999;
     background-color: #0B0B0B;
     padding: 20vh 10vw;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
-    font-style:bold;
+    font-style: bold;
 }
 
-.line{
+.line {
     height: fit-content;
     overflow: hidden;
     /* background-color: green; */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap:1.5vw;
+    gap: 1.5vw;
 }
 
-#line1-part1{
+#line1-part1 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5vw;
-    font-family:  "Brygada 1918", serif; 
+    font-weight: 100;
+    font-family: "Merriweather", serif;
     font-style: italic;
-    font-weight: 100 ;
 }
 
-#line1-part1 h5, #line1-part1 h6{
+#line1-part1 h5,
+#line1-part1 h6 {
     font-size: 3vw;
 }
 
-#line1-part1 h5{
+#line1-part1 h5 {
     width: 4vw;
     text-align: right;
 }
 
 
-.line h1{
+.line h1 {
     font-size: 7vw;
     text-transform: uppercase;
     line-height: 1;
@@ -67,7 +85,7 @@ body {
 
 }
 
-.line h2{
+.line h2 {
     /* background-color: green; */
     margin: 0;
     padding: 0vw 1vw;
@@ -76,33 +94,275 @@ body {
     text-transform: uppercase;
     /* animation-name: anime; */
     opacity: 0;
-    animation-duration: 2s;
+    animation-duration: 1.4s;
     animation-iteration-count: infinite;
 
 }
-.line-big{
+
+.line-big {
     /* background-color: red; */
     height: 7.1vw;
 }
 
-#main{
+#main {
     position: relative;
 }
- 
-#page1{
+
+#page1 {
     height: 100vh;
     width: 100%;
     background-color: #151515;
+
+}
+
+#page1 #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 4.5vw;
+    font-family: "Poppins", sans-serif;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+
+}
+
+#nav-part2 h4 {
+    /* background-color: green; */
+    /* padding: 2vw; */
+    font-size: 0.7vw;
+}
+
+.hero {
+    width: 72%;
+    margin-left: 27%;
+
+}
+
+.hero:nth-child(2) {
+    margin-top: 15vh;
+
+}
+
+.hero {
+    text-transform: uppercase;
+    line-height: 8vw;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+
+}
+
+.hero h1 {
+    font-size: 7.1vw;
+
+
+}
+
+.hero h2 {
+    font-size: 7.1vw;
+    border-bottom: 0.6vw solid white;
+    padding-bottom: 0.1vw;
+    /* transition: all ease 0.3s; */
+    height: 7.5vw;
+
+
+}
+
+.hero h3 {
+    font-size: 6.1vw;
+
+
+}
+
+.hero h2:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    border-bottom: transparent;
 }
 
 
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+
+}
+
+
+
+
+#video-container {
+    height: 67vh;
+    width: 71vw;
+    position: relative;
+    left: 28.4%;
+    background-image: url(./video-bg.jpg);
+    overflow: hidden;
+
+
+}
+
+#video-container img {
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#video-cursor {
+    background-color: #FFA630;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-cursor i {
+    font-size: 2.3vw;
+}
+
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: green;
+    position: relative;
+}
+
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 5vh;
+
+}
+
+#page4-content {
+    width: 72vw;
+    margin-left: 28%;
+}
+
+#page4-content h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-family: 100;
+    margin-bottom: 4vw;
+}
+
+#page4-content .underline {
+    height: 2px;
+    width: 100%;
+    background-color: #656363;
+    margin: 5vw 0;
+
+
+}
+
+#page4-content>p {
+    font-size: 1.9vw;
+    font-family: "Poppins", sans-serif;
+    width: 48%;
+    margin-bottom: 4vw;
+    margin-top: 6vw;
+    line-height: 1.3;
+
+}
+
+#page4-flex {
+    display: flex;
+}
+
+#page4-flex img {
+    width: 48%;
+
+
+}
+
+#page4-flex p {
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+    font-family: "Poppins", sans-serif;
+
+}
+
+#page4-blue-div {
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 2vw;
+    position: relative;
+    margin-top: -36vh;
+    margin-left: 25vw;
+
+}
+
+.blue-div-elem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.6vw 0;
+    border-bottom: 2px solid #f4f4f4;
+
+}
+
+.blue-div-elem h4 {
+    font-size: 1.2vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+
+}
+
+.blue-div-elem p {
+    font-family: "Poppins", sans-serif;
+    width: 50%;
+    font-size: 0.8vw;
+
+}
+
+
+
+#page5{
+    min-width: 100vh;
+    width: 100%;
+    padding: 5vw 0;
+
+}
+
 @keyframes anime {
 
-    0%{
+    0% {
         font-family: "Poppins", sans-serif;
         color: white;
         opacity: 1;
     }
+
     /* 45%{
 
         font-family: "Poppins", sans-serif;
@@ -116,12 +376,12 @@ body {
         opacity: 1;
         
     } */
-    100%{
-        font-family:"Brygada 1918", serif; 
+    100% {
+        font-family: "Brygada 1918", serif;
         font-style: italic;
         -webkit-text-stroke: 1px #fff;
         color: transparent;
         opacity: 1;
     }
-    
+
 }

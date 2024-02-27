@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;1,100&family=Poppins:wght@100;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@1,400..700&family=Noto+Sans:ital,wght@0,100;1,100&family=Poppins:wght@100;400&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #0B0B0B;
+
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #0B0B0B;
+    padding: 20vh 10vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style:bold;
+}
+
+.line{
+    height: fit-content;
+    overflow: hidden;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:1.5vw;
+}
+
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    font-family:  "Brygada 1918", serif; 
+    font-style: italic;
+    font-weight: 100 ;
+}
+
+#line1-part1 h5, #line1-part1 h6{
+    font-size: 3vw;
+}
+
+#line1-part1 h5{
+    width: 4vw;
+    text-align: right;
+}
+
+
+.line h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 1;
+    /* border: 2px solid red; */
+    /* margin: 0; */
+
+}
+
+.line h2{
+    /* background-color: green; */
+    margin: 0;
+    padding: 0vw 1vw;
+    font-size: 5.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    /* animation-name: anime; */
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.line-big{
+    /* background-color: red; */
+    height: 7.1vw;
+}
+
+#main{
+    position: relative;
+}
+ 
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+
+@keyframes anime {
+
+    0%{
+        font-family: "Poppins", sans-serif;
+        color: white;
+        opacity: 1;
+    }
+    /* 45%{
+
+        font-family: "Poppins", sans-serif;
+        color: white;
+        opacity: 1;
+    } */
+    /* 50%{
+        font-family:"Brygada 1918", serif; 
+        color: transparent;
+    
+        opacity: 1;
+        
+    } */
+    100%{
+        font-family:"Brygada 1918", serif; 
+        font-style: italic;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        opacity: 1;
+    }
+    
+}

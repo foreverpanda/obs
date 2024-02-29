@@ -33,6 +33,7 @@ body {
     width: 100%;
     background-color: #151515;
     overflow-x: hidden;
+    cursor: none;
 
 }
 
@@ -49,6 +50,7 @@ body {
 }
 
 #loader {
+    cursor: none;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -130,6 +132,7 @@ body {
     height: 100vh;
     width: 100%;
     background-color: #151515;
+    margin-bottom: 2vw;
 
 }
 
@@ -244,6 +247,7 @@ body {
     height: 67vh;
     width: 71vw;
     position: relative;
+    background-color: #0B0B0B;
     left: 28.4%;
     background-image: url(./video-bg.jpg);
     /* overflow: hidden; */
@@ -544,6 +548,8 @@ body {
     padding-left: 28vw;
     font-family: "CustomFontLight";
     padding-right: 4vw;
+    padding-bottom: 100vh;
+    /* background-color: red; */
     
     
     
@@ -617,3 +623,6 @@ body {
     padding-bottom: 5vw;
 }
 
+#filler{
+    height: 15vh;
+}

@@ -33,7 +33,7 @@ body {
     width: 100%;
     background-color: #151515;
     overflow-x: hidden;
-    cursor: none;
+    /* cursor: none; */
 
 }
 
@@ -242,6 +242,53 @@ body {
 
 
 
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(61, 61, 61);
+    position: relative  ;
+    padding: 7vh 0;
+    font-family: "CustomFontRegular";
+    margin-bottom: 20vh;
+}
+
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+
+}
+
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "CustomFontItalic";
+    left: -15%;
+    bottom: 27%;
+    font-weight: 100;
+
+
+}
+
+#page3 .underline{
+    margin-left: 28vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #video-container {
     /* background-color: red; */
     height: 67vh;
@@ -296,6 +343,34 @@ body {
     width: 100%;
     background-color: green;
     position: relative;
+    padding: 15vh 2vw;
+}
+
+
+
+#image-div-container{
+    background-color: red;
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.image-div{
+    height: 33vw;
+    width: 24vw;
+    position: relative;
+    overflow: hidden;
+     flex-shrink: 0 ;
+
+}
+
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -625,4 +700,11 @@ body {
 
 #filler{
     height: 15vh;
+}
+
+._canvas_container{
+
+    z-index: 99999999999999999999999999 !important ;
+    pointer-events: none;
+
 }

@@ -169,14 +169,13 @@ function cursorAnimation() {
       scale: 1,
     });
     gsap.to("#video-cursor", {
-      left: "10%",
-      top: "30%",
+      left: "90%",
+      top: "5%",
     });
   });
 }
 loadingAnimation();
 cursorAnimation();
-locomotiveAnimation();
 
 function sheryAnimation() {
   Shery.imageEffect(".image-div", {
@@ -215,4 +214,115 @@ function sheryAnimation() {
     gooey: true,
   });
 }
+
+
+
+document.querySelector(".scroll-up-head1").addEventListener("mouseenter",function(){
+  gsap.to(".scroll-up-head1 h3",{
+    y:-80,
+    duration:0.4
+  })
+})
+
+document.querySelector(".scroll-up-head1").addEventListener("mouseleave",function(){
+  gsap.to(".scroll-up-head1 h3",{
+    y:0,
+    duration:0.4
+  })
+})
+
+document.querySelector(".scroll-up-head2").addEventListener("mouseenter",function(){
+  gsap.to(".scroll-up-head2 h3",{
+    y:-80,
+    duration:0.4
+  })
+})
+
+document.querySelector(".scroll-up-head2").addEventListener("mouseleave",function(){
+  gsap.to(".scroll-up-head2 h3",{
+    y:0,
+    duration:0.4
+  })
+})
+
+
+document.querySelector(".scroll-up-head3").addEventListener("mouseenter",function(){
+  gsap.to(".scroll-up-head3 h3",{
+    y:-80,
+    duration:0.4
+  })
+})
+
+document.querySelector(".scroll-up-head3").addEventListener("mouseleave",function(){
+  gsap.to(".scroll-up-head3 h3",{
+    y:0,
+    duration:0.4
+  })
+})
+
+document.querySelector(".scroll-up-head4").addEventListener("mouseenter",function(){
+  gsap.to(".scroll-up-head4 h3",{
+    y:-80,
+    duration:0.4
+  })
+})
+
+document.querySelector(".scroll-up-head4").addEventListener("mouseleave",function(){
+  gsap.to(".scroll-up-head4 h3",{
+    y:0,
+    duration:0.4
+  })
+})
+
+
+
+
 sheryAnimation();
+
+// document.addEventListener("mousemove", function (dets) {
+//   console.log(dets.x, dets.y);
+//   gsap.to("#flag", {
+//     left: dets.x,
+//     top: dets.y,
+//   });
+// });
+
+document
+  .querySelector("#hero3")
+  .addEventListener("mousemove", function (dets) {
+    // gsap.to("#flag",{
+    //   opacity:1
+
+    // })
+    var rotate = 0;
+    var diffrot = 0;
+    rotate = dets.clientX;
+
+    setInterval(function () {diffrot = dets.clientX - rotate;}, 100);
+    
+    console.log("value of roatte : ",rotate);
+
+    console.log("value of diffrot : ",diffrot);
+    gsap.to(document.querySelector("#flag"), {
+      opacity: 1,
+      ease: Power3,
+      top:dets.clientY,
+      
+      left: dets.clientX,
+      rotate: gsap.utils.clamp(-15, 15, diffrot),
+      duration: 0.3,
+      scrub:0.9
+    });
+  });
+document.querySelector("#hero3").addEventListener("mouseleave", function () {
+  gsap.to("#flag", {
+    opacity: 0,
+  });
+});
+
+
+
+
+
+
+locomotiveAnimation();

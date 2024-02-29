@@ -132,7 +132,8 @@ body {
     height: 100vh;
     width: 100%;
     background-color: #151515;
-    margin-bottom: 2vw;
+    margin-bottom: 7vw;
+    position: relative;
 
 }
 
@@ -152,10 +153,13 @@ body {
 
 }
 
+
+
 #nav-part2 h4 {
     /* background-color: green; */
     /* padding: 2vw; */
-    font-size: 0.7vw;
+    font-size: 0.9vw;
+    font-weight: 100;
 }
 
 
@@ -237,6 +241,7 @@ body {
     padding-top: 5vh;
     position: relative;
     background-color: #151515;
+    margin-bottom: 14vw;
 }
 
 
@@ -251,6 +256,7 @@ body {
     padding: 7vh 0;
     font-family: "CustomFontRegular";
     margin-bottom: 20vh;
+   
 }
 
 #page3 h1{
@@ -258,6 +264,7 @@ body {
     text-transform: uppercase;
     position: relative;
     margin-left: 28vw;
+    /* background-color: red; */
 
 }
 
@@ -347,6 +354,17 @@ body {
     background-color: #151515;
     position: relative;
     padding: 15vh 2vw;
+    
+}
+
+
+.scroll-up-head{
+    /* background-color: red; */
+    height: 2.5vw;
+    font-size: 2vw;
+    width: fit-content;
+    overflow-y: hidden;
+    margin-bottom: 1vw;
 }
 
 
@@ -488,6 +506,7 @@ body {
     width: 100%;
     padding-top: 7vh 0;
     background-color: #151515;
+    margin-top: 20vw;
 
 }
 
@@ -563,6 +582,7 @@ body {
     position: relative;
     margin-top: -36vh;
     margin-left: 25vw;
+    padding-bottom: 7vw;
 
 }
 
@@ -808,7 +828,7 @@ body {
 }
 
 #filler{
-    height: 15vh;
+    height: 17vh;
 }
 
 ._canvas_container{
@@ -816,4 +836,23 @@ body {
     z-index: 999999999 !important ;
     pointer-events: none;
 
+}
+
+#flag{
+    height: 27vw;
+    position: absolute;
+    top: 50;
+    left:50 ;
+    transform: translate(-50%,-50%);
+
+    opacity: 0;
+}
+
+#hero3{
+    /* background-color: red; */
+
+    position: relative;
+    
+
+    
 }

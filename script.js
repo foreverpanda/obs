@@ -1,3 +1,5 @@
+
+
 function loadingAnimation(){
     var tl = gsap.timeline();
 

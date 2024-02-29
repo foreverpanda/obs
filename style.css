@@ -1,20 +1,21 @@
-
 @font-face {
     font-family: "CustomFontRegular";
     src: url("./plain-regular-webfont.woff") format("woff");
 }
+
 @font-face {
-    font-family: "CustomFontItalic" ;
+    font-family: "CustomFontItalic";
     src: url("./silkserif-regularitalic-webfont.woff");
 }
 
 
 @font-face {
-    font-family: "CustomFontLight" ;
+    font-family: "CustomFontLight";
     src: url("./plain-light-webfont.woff");
 }
+
 @font-face {
-    font-family:"CustomFontLightItalic";
+    font-family: "CustomFontLightItalic";
     src: url("./silkserif-lightitalic-webfont.woff");
 }
 
@@ -30,7 +31,7 @@ html,
 body {
     height: 100vh;
     width: 100%;
-    background-color: #0B0B0B;
+    background-color: #151515;
     overflow-x: hidden;
 
 }
@@ -54,7 +55,7 @@ body {
     z-index: 999999999999999999999999999;
     background-color: #0B0B0B;
     padding: 20vh 10vw;
-    font-family:"CustomFontLight";
+    font-family: "CustomFontLight";
     font-weight: 100;
     /* font-style: bold; */
 }
@@ -162,13 +163,16 @@ body {
 }
 
 .hero {
-    width: 72%;
-    margin-left: 27%;
+    /* background-color: red; */
+    width: 92%;
+    margin-left: 10%;
+    padding-left: 23%;
     text-transform: uppercase;
     line-height: 7.5vw;
     font-family: "CustomFontLight";
-    font-weight:lighter;
-    overflow: hidden;
+    font-weight: lighter;
+    overflow-y: hidden;
+    overflow-x: visible;
     display: flex;
     align-items: center;
     position: relative;
@@ -176,10 +180,29 @@ body {
 
 }
 
+
+#hero1 h1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "CustomFontItalic";
+    left: -24%;
+    top:-15%;
+    font-weight: 100;
+    /* background-color: red; */
+
+
+}
+
 .hero h1 {
     font-size: 6.9vw;
+    position: relative;
 
 
+}
+
+#hero1 h1{
+    position: relative;
 }
 
 .hero h2 {
@@ -276,6 +299,7 @@ body {
     min-height: 100vh;
     width: 100%;
     padding-top: 7vh 0;
+    background-color: #151515;
 
 }
 
@@ -290,7 +314,22 @@ body {
     font-family: "CustomFontRegular";
     font-family: 100;
     margin-bottom: 3vw;
+    position: relative;
 }
+
+
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "CustomFontItalic";
+    left: -15%;
+    bottom: 27%;
+    font-weight: 100;
+
+
+}
+
 
 #page4-content .underline {
     height: 1px;
@@ -352,8 +391,8 @@ body {
     font-size: 1.2vw;
     font-family: "CustomFontRegular";
     font-weight: 500;
-    
-    
+
+
 }
 
 .blue-div-elem p {
@@ -365,12 +404,105 @@ body {
 
 
 
-#page5{
+#page5 {
     min-width: 100vh;
     width: 100%;
     padding: 5vw 0;
+    background-color: #151515;
+    position: relative;
 
 }
+
+.elem {
+
+    /* display: flex; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: 1vw;
+
+
+
+
+}
+
+.elem h1 {
+    font-size: 8vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    /* background-color: red; */
+    margin-right: 16px;
+    animation-name: marqueeFront;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    font-family: "CustomFontRegular";
+    line-height: 6vw;
+
+
+}
+
+#page5 span {
+    font-style: italic;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-family: "CustomFontItalic";
+}
+
+
+.elem2 {
+
+    overflow-y: hidden;
+    /* background-color: red; */
+    /* height: fit-content; */
+    /* display: flex; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: 1vw;
+
+
+
+
+}
+
+.elem2 h1 {
+    font-size: 8vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 100;
+
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    /* background-color: red; */
+    font-family: "CustomFontRegular";
+    margin-right: 16px;
+    /* transform: translateX(calc(-100% - 20px)); */
+    animation-name: marqueeFront;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    line-height: 9.8vw;
+
+
+}
+
+
+
+@keyframes marqueeFront {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+
+}
+
 
 @keyframes anime {
 
@@ -403,3 +535,85 @@ body {
     }
 
 }
+
+
+#footer{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    font-family: "CustomFontLight";
+    padding-right: 4vw;
+    
+    
+    
+}
+#footer h1{
+    font-family: "CustomFontLight";
+
+    font-weight: 700;
+    text-transform: uppercase;
+/* background-color: rebeccapurple; */
+    /* font-style: bolder; */
+    font-size: 7.6vw;
+    padding-bottom: 2vh;
+    padding-top: 7vw;
+    letter-spacing: 0.4vw;
+    position: relative;
+
+}
+
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "CustomFontItalic";
+    left: -15%;
+    bottom: 27%;
+    font-weight: 100;
+
+
+}
+
+.underline{
+    height: 1px;
+    width: 100%;
+    background-color: #a8a6a6;
+    margin: 4vw 0;
+
+}
+
+#footer-div{ 
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw ;
+    padding-top:6vw;
+    /* background-color: red; */
+
+}
+
+#footer-div h6{
+    font-size: 1vw;
+    margin-bottom: 1.4vw;
+
+}
+#footer-div h5{
+    font-size: 1.6vw;
+    font-weight: 100;
+    margin: 0.2vh 0;
+
+
+}
+
+.box{
+    width: 20%;
+}
+
+#footer > h5{
+    /* background-color: red; */
+    font-size: 1vw;
+    font-weight: 100;
+    padding-bottom: 5vw;
+}
+

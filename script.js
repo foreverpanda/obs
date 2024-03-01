@@ -40,6 +40,80 @@ function locomotiveAnimation() {
   ScrollTrigger.refresh();
 }
 
+function scrollUpText() {
+  document
+    .querySelector(".scroll-up-head1")
+    .addEventListener("mouseenter", function () {
+      gsap.to(".scroll-up-head1 h3", {
+        y: -72,
+        duration: 0.4,
+      });
+    });
+
+  document
+    .querySelector(".scroll-up-head1")
+    .addEventListener("mouseleave", function () {
+      gsap.to(".scroll-up-head1 h3", {
+        y: 0,
+        duration: 0.4,
+      });
+    });
+
+  document
+    .querySelector(".scroll-up-head2")
+    .addEventListener("mouseenter", function () {
+      gsap.to(".scroll-up-head2 h3", {
+        y: -73,
+        duration: 0.4,
+      });
+    });
+
+  document
+    .querySelector(".scroll-up-head2")
+    .addEventListener("mouseleave", function () {
+      gsap.to(".scroll-up-head2 h3", {
+        y: 0,
+        duration: 0.4,
+      });
+    });
+
+  document
+    .querySelector(".scroll-up-head3")
+    .addEventListener("mouseenter", function () {
+      gsap.to(".scroll-up-head3 h3", {
+        y: -72,
+        duration: 0.4,
+      });
+    });
+
+  document
+    .querySelector(".scroll-up-head3")
+    .addEventListener("mouseleave", function () {
+      gsap.to(".scroll-up-head3 h3", {
+        y: 0,
+        duration: 0.4,
+      });
+    });
+
+  document
+    .querySelector(".scroll-up-head4")
+    .addEventListener("mouseenter", function () {
+      gsap.to(".scroll-up-head4 h3", {
+        y: -72,
+        duration: 0.4,
+      });
+    });
+
+  document
+    .querySelector(".scroll-up-head4")
+    .addEventListener("mouseleave", function () {
+      gsap.to(".scroll-up-head4 h3", {
+        y: 0,
+        duration: 0.4,
+      });
+    });
+}
+
 function loadingAnimation() {
   var tl = gsap.timeline();
 
@@ -153,29 +227,68 @@ function cursorAnimation() {
     }
   });
 
-  videoContainer.addEventListener("mouseenter", function () {
-    videoContainer.addEventListener("mousemove", function (dets) {
+  // videoContainer.addEventListener("mouseenter", function () {
+  //   videoContainer.addEventListener("mousemove", function (dets) {
+  //     gsap.to("#crsr", {
+  //       scale: 0,
+  //     });
+  //     gsap.to("#video-cursor", {
+  //       left: dets.clientX,
+  //       top: dets.clientY,
+  //     });
+  //   });
+  // });
+  // videoContainer.addEventListener("mouseleave", function () {
+  //   gsap.to("#crsr", {
+  //     scale: 1,
+  //   });
+  //   gsap.to("#video-cursor", {
+  //     left: "90%",
+  //     top: "5%",
+  //   });
+  // });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const videoContainer = document.querySelector("#video-container");
+    const customCursor = document.querySelector("#video-cursor");
+  
+    videoContainer.addEventListener("mouseenter", function () {
       gsap.to("#crsr", {
         scale: 0,
       });
-      gsap.to("#video-cursor", {
-        left: dets.x - 900,
-        top: dets.y - 900,
+      videoContainer.addEventListener("mousemove", moveCursor);
+    });
+  
+    videoContainer.addEventListener("mouseleave", function () {
+      gsap.to("#crsr", {
+        scale: 1,
       });
+      gsap.to("#video-cursor", {
+        left: "90%",
+        top: "5%",
+      });
+      videoContainer.removeEventListener("mousemove", moveCursor);
     });
+  
+    
+    function moveCursor(event) {
+      // Get the position of the video container
+      const containerRect = videoContainer.getBoundingClientRect();
+    
+      // Calculate the position of the cursor relative to the video container
+      const cursorX = event.clientX - containerRect.left;
+      const cursorY = event.clientY - containerRect.top;
+    
+      // Apply the position to the custom cursor
+      gsap.to("#video-cursor", {
+        left: cursorX,
+        top: cursorY,
+      });
+    }
   });
-  videoContainer.addEventListener("mouseleave", function () {
-    gsap.to("#crsr", {
-      scale: 1,
-    });
-    gsap.to("#video-cursor", {
-      left: "90%",
-      top: "5%",
-    });
-  });
+
 }
-loadingAnimation();
-cursorAnimation();
+
 
 function sheryAnimation() {
   Shery.imageEffect(".image-div", {
@@ -216,104 +329,33 @@ function sheryAnimation() {
 }
 
 
+document.querySelector("#hero3").addEventListener("mousemove", function (dets) {
+  // gsap.to("#flag",{
+  //   opacity:1
 
-document.querySelector(".scroll-up-head1").addEventListener("mouseenter",function(){
-  gsap.to(".scroll-up-head1 h3",{
-    y:-80,
-    duration:0.4
-  })
-})
+  // })
+  var rotate = 0;
+  var diffrot = 0;
+  rotate = dets.clientX;
 
-document.querySelector(".scroll-up-head1").addEventListener("mouseleave",function(){
-  gsap.to(".scroll-up-head1 h3",{
-    y:0,
-    duration:0.4
-  })
-})
+  setInterval(function () {
+    diffrot = dets.clientX - rotate;
+  }, 100);
 
-document.querySelector(".scroll-up-head2").addEventListener("mouseenter",function(){
-  gsap.to(".scroll-up-head2 h3",{
-    y:-80,
-    duration:0.4
-  })
-})
+  console.log("value of roatte : ", rotate);
 
-document.querySelector(".scroll-up-head2").addEventListener("mouseleave",function(){
-  gsap.to(".scroll-up-head2 h3",{
-    y:0,
-    duration:0.4
-  })
-})
+  console.log("value of diffrot : ", diffrot);
+  gsap.to(document.querySelector("#flag"), {
+    opacity: 1,
+    ease: Power3,
+    top: dets.clientY,
 
-
-document.querySelector(".scroll-up-head3").addEventListener("mouseenter",function(){
-  gsap.to(".scroll-up-head3 h3",{
-    y:-80,
-    duration:0.4
-  })
-})
-
-document.querySelector(".scroll-up-head3").addEventListener("mouseleave",function(){
-  gsap.to(".scroll-up-head3 h3",{
-    y:0,
-    duration:0.4
-  })
-})
-
-document.querySelector(".scroll-up-head4").addEventListener("mouseenter",function(){
-  gsap.to(".scroll-up-head4 h3",{
-    y:-80,
-    duration:0.4
-  })
-})
-
-document.querySelector(".scroll-up-head4").addEventListener("mouseleave",function(){
-  gsap.to(".scroll-up-head4 h3",{
-    y:0,
-    duration:0.4
-  })
-})
-
-
-
-
-sheryAnimation();
-
-// document.addEventListener("mousemove", function (dets) {
-//   console.log(dets.x, dets.y);
-//   gsap.to("#flag", {
-//     left: dets.x,
-//     top: dets.y,
-//   });
-// });
-
-document
-  .querySelector("#hero3")
-  .addEventListener("mousemove", function (dets) {
-    // gsap.to("#flag",{
-    //   opacity:1
-
-    // })
-    var rotate = 0;
-    var diffrot = 0;
-    rotate = dets.clientX;
-
-    setInterval(function () {diffrot = dets.clientX - rotate;}, 100);
-    
-    console.log("value of roatte : ",rotate);
-
-    console.log("value of diffrot : ",diffrot);
-    gsap.to(document.querySelector("#flag"), {
-      opacity: 1,
-      ease: Power3,
-      top:dets.clientY,
-      
-      left: dets.clientX,
-      rotate: gsap.utils.clamp(-15, 15, diffrot),
-      duration: 0.3,
-      scrub:0.9
-    });
+    left: dets.clientX,
+    rotate: gsap.utils.clamp(-15, 15, diffrot),
+    duration: 0.3,
+    scrub: 0.9,
   });
+});
 document.querySelector("#hero3").addEventListener("mouseleave", function () {
   gsap.to("#flag", {
     opacity: 0,
@@ -321,8 +363,9 @@ document.querySelector("#hero3").addEventListener("mouseleave", function () {
 });
 
 
-
-
-
-
 locomotiveAnimation();
+
+sheryAnimation();
+loadingAnimation();
+cursorAnimation();
+scrollUpText();

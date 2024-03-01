@@ -1,22 +1,22 @@
 @font-face {
     font-family: "CustomFontRegular";
-    src: url("./plain-regular-webfont.woff") format("woff");
+    src: url("./assets/fonts/plain-regular-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "CustomFontItalic";
-    src: url("./silkserif-regularitalic-webfont.woff");
+    src: url("./assets/fonts/silkserif-regularitalic-webfont.woff");
 }
 
 
 @font-face {
     font-family: "CustomFontLight";
-    src: url("./plain-light-webfont.woff");
+    src: url("./assets/fonts/plain-light-webfont.woff");
 }
 
 @font-face {
     font-family: "CustomFontLightItalic";
-    src: url("./silkserif-lightitalic-webfont.woff");
+    src: url("./assets/fonts/silkserif-lightitalic-webfont.woff");
 }
 
 * {
@@ -96,7 +96,7 @@ body {
 
 
 .line h1 {
-    font-size: 7vw;
+    font-size: 6.5vw;
     text-transform: uppercase;
     line-height: 1;
     /* border: 2px solid red; */
